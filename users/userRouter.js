@@ -63,7 +63,7 @@ router.get("/:id", validateUserId, (req, res) => {
 
 router.get("/:id/posts", validateUserId, (req, res) => {
   // do your magic!
-  Users.getUsersPosts(req.user.id)
+  Users.getUserPosts(req.user.id)
     .then(posts => {
       res.status(200).json(posts);
     })
